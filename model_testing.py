@@ -4,8 +4,8 @@ from joblib import load
 
 knn = load('knn.joblib') 
 
-X_test = pd.read_csv('X_test.csv')
-y_test = pd.read_csv('y_test.csv')
+X_test = pd.read_csv('X_test.csv', index_col='index')
+y_test = pd.read_csv('y_test.csv', index_col='index')
 print(y_test)
 
 def three_score(model_pipe, X, y): #оценка модели отдельной функцией, 3 метрики, условие выполнено

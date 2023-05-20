@@ -4,8 +4,8 @@ from joblib import dump, load
 from sklearn.pipeline import Pipeline#импортирую бибилотеку трубы
 
 
-X_train = pd.read_csv('X_train.csv')
-y_train = pd.read_csv('y_train.csv')
+X_train = pd.read_csv('X_train.csv', index_col='index')
+y_train = pd.read_csv('y_train.csv', index_col='index')
 
 
 pipe = Pipeline([ 

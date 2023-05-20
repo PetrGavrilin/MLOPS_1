@@ -25,8 +25,8 @@ X_test = standart_pipe.fit_transform(X_test)# проводим обучение
 X_train = pd.DataFrame(X_train)#иначе в csv не запихать
 X_test = pd.DataFrame(X_test)
 
-X_test.to_csv('X_test.csv')
-y_test.to_csv('y_test.csv') 
-X_train.to_csv('X_train.csv')
-y_train.to_csv('y_train.csv') 
+X_test.to_csv('X_test.csv', index_label='index')
+y_test.to_csv('y_test.csv', index_label='index') 
+X_train.to_csv('X_train.csv', index_label='index')
+y_train.to_csv('y_train.csv', index_label='index') 
 print('data_preprocessing исполнен')

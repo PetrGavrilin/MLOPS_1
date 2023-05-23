@@ -7,7 +7,7 @@ knn = load('knn.joblib')
 
 X_test = pd.read_csv('X_test.csv', index_col='index')
 y_test_pd = pd.read_csv('y_test.csv', index_col='index')
-print(y_test.value_counts())
+print(y_test_pd.value_counts())
 
 y_test = y_test_pd['churn']
 

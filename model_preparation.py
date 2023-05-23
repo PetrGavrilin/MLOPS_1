@@ -7,7 +7,7 @@ from sklearn.pipeline import Pipeline#импортирую бибилотеку 
 X_train = pd.read_csv('X_train.csv', index_col='index')
 y_train_pd = pd.read_csv('y_train.csv', index_col='index')
 
-y_train = y_train_pd[0]
+y_train = y_train_pd['churn']
 
 
 pipe = Pipeline([ 

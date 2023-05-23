@@ -22,8 +22,8 @@ def three_score(model_pipe, X, y): #оценка модели отдельной
     return f1_score(y, np.round(y_model), average='weighted'), roc_auc_score(y,np.round(y_model), average='weighted'),recall_score(y,np.round(y_model), average='weighted')
 y_model = knn.predict(X_test)
 print(np.unique(y_model, return_counts=True)
-print(f1_score( y_test, y_model)) #Classification metrics can't handle a mix of continuous-multioutput and multiclass-multioutput targets
+#print(f1_score( y_test, y_model)) #Classification metrics can't handle a mix of continuous-multioutput and multiclass-multioutput targets
 
 
-print('результаты тестов',three_score(knn, X_test, y_test))#multiclass-multioutput is not supported
+#print('результаты тестов',three_score(knn, X_test, y_test))#multiclass-multioutput is not supported
 print('pipeline исполнен успешно')

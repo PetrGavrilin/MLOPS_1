@@ -6,8 +6,10 @@ from joblib import load
 knn = load('knn.joblib') 
 
 X_test = pd.read_csv('X_test.csv', index_col='index')
-y_test = pd.read_csv('y_test.csv', index_col='index')
+y_test_pd = pd.read_csv('y_test.csv', index_col='index')
 print(y_test.value_counts())
+
+y_test = y_test_pd['churn']
 
 def three_score(model_pipe, X, y): #оценка модели отдельной функцией, 3 метрики, условие выполнено
     """Расчет коэффициента f1, roc_auc, recall 

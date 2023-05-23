@@ -14,8 +14,9 @@ print(y_test_pd.value_counts())
 y_test = y_test_pd['churn']
 
 y_model = knn.predict(X_test)
-print(np.unique(y_model, return_counts=True)
-print('fff')
+
+print(np.unique(y_model, return_counts=True))
+
 print(f1_score( y_test, y_model)) #Classification metrics can't handle a mix of continuous-multioutput and multiclass-multioutput targets
 
 def three_score(model_pipe, X, y): #оценка модели отдельной функцией, 3 метрики, условие выполнено

@@ -3,6 +3,8 @@ import numpy as np
 from sklearn.metrics import recall_score,roc_auc_score,f1_score
 from joblib import load
 
+print('nnn')
+
 knn = load('knn.joblib') 
 
 X_test = pd.read_csv('X_test.csv', index_col='index')

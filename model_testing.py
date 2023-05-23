@@ -18,7 +18,7 @@ def three_score(model_pipe, X, y): #оценка модели отдельной
     y: истинные значения
     """
     y_model = model_pipe.predict(X)
-    return f1_score(y, y_model, average='weighted'), roc_auc_score(y,y_model, average='weighted'),recall_score(y,y_model, average='weighted')
+    return f1_score(y, np.round(y_model), average='weighted'), roc_auc_score(y,np.round(y_model), average='weighted'),recall_score(y,np.round(y_model), average='weighted')
 y_model = knn.predict(X_test)
 print(f1_score( X_test, y_test)) #Classification metrics can't handle a mix of continuous-multioutput and multiclass-multioutput targets
 

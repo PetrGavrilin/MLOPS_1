@@ -11,6 +11,12 @@ print(y_test.value_counts())
 
 y_test = y_test_pd['churn']
 
+
+y_model = knn.predict(X_test)
+print(np.unique(y_model, return_counts=True)
+print('fff')
+print(f1_score( y_test, y_model)) #Classification metrics can't handle a mix of continuous-multioutput and multiclass-multioutput targets
+
 def three_score(model_pipe, X, y): #оценка модели отдельной функцией, 3 метрики, условие выполнено
     
     """Расчет коэффициента f1, roc_auc, recall 
@@ -24,12 +30,7 @@ def three_score(model_pipe, X, y): #оценка модели отдельной
     y_model = model_pipe.predict(X)
     return f1_score(y, np.round(y_model), average='weighted'), roc_auc_score(y,np.round(y_model), average='weighted'),recall_score(y,np.round(y_model), average='weighted')
 
-y_model = knn.predict(X_test)
-print(np.unique(y_model, return_counts=True)
-print('fff')
-print(f1_score( y_test, y_model)) #Classification metrics can't handle a mix of continuous-multioutput and multiclass-multioutput targets
-
-
+      
 #print('результаты тестов',three_score(knn, X_test, y_test))#multiclass-multioutput is not supported
 
 #print('pipeline исполнен успешно')

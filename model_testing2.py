@@ -33,6 +33,6 @@ def three_score(model_pipe, X, y): #оценка модели отдельной
     return f1_score(y, np.round(y_model), average='weighted'), roc_auc_score(y,np.round(y_model), average='weighted'),recall_score(y,np.round(y_model), average='weighted')
 
       
-#print('результаты тестов',three_score(knn, X_test, y_test))#multiclass-multioutput is not supported
+print('результаты тестов',three_score(knn, X_test, y_test))#multiclass-multioutput is not supported
 
-#print('pipeline исполнен успешно')
+print('pipeline исполнен успешно')

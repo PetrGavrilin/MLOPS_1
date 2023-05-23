@@ -11,7 +11,6 @@ print(y_test_pd.value_counts())
 
 y_test = y_test_pd['churn']
 
-
 y_model = knn.predict(X_test)
 print(np.unique(y_model, return_counts=True)
 print('fff')
